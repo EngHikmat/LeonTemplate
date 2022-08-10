@@ -352,13 +352,14 @@ body {
     margin-bottom: 0;
 }
 
-.portfolio .button{
+.button {
     width: 150px;
     text-align: center;
     margin: auto;
     margin-top: 60px;
 }
-.portfolio .button .button-content{
+
+.button .button-content {
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid var(--main-color);
@@ -368,7 +369,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.button:hover .button-content{
+.button:hover .button-content {
     background-color: var(--main-color);
     cursor: pointer;
     color: white;
