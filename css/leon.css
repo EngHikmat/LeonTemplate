@@ -351,3 +351,25 @@ body {
     line-height: 1.6;
     margin-bottom: 0;
 }
+
+.portfolio .button{
+    width: 150px;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+}
+.portfolio .button .button-content{
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    padding: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button:hover .button-content{
+    background-color: var(--main-color);
+    cursor: pointer;
+    color: white;
+}
