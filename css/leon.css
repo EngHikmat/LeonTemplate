@@ -1,7 +1,9 @@
 /*Start Variables*/
-:root{
-   --main-color: #10cab7
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
 }
+
 /*End Variables*/
 /*--------------------------------------------------------Global Rules-------------------------------------------------*/
 * {
@@ -44,6 +46,35 @@ body {
 }
 
 /*--------------------------------------------------------End Global Rules-------------------------------------------------*/
+/*Start Components*/
+.special-heading {
+    font-weight: 800;
+    font-size: 100px;
+    color: #ebeced;
+    text-align: center;
+    letter-spacing: -3px;
+    margin: 0;
+
+}
+
+.special-heading+p {
+    text-align: center;
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+}
+
+@media (max-width:767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading+p {
+        margin: -20px;
+    }
+}
+
+/*End Components*/
 
 /*--------------------------------------------------------Header----------------------------------------------------------*/
 .header {
@@ -109,7 +140,7 @@ body {
     top: calc(100% + 15px);
     display: none;
     z-index: 1;
-    
+
 
 }
 
@@ -124,7 +155,7 @@ body {
     top: -20px;
 }
 
-.header .links:hover ul{
+.header .links:hover ul {
     display: block;
 }
 
@@ -140,37 +171,40 @@ body {
     padding-left: 25px;
 }
 
-.header .links ul li:not(:last-child){
+.header .links ul li:not(:last-child) {
     border-bottom: #ddd solid 1px;
 }
 
 /*--------------------------------------------------------End Header----------------------------------------------------------*/
 /*--------------------------------------------------------Landing------------------------------------------------------------*/
 
-.landing{
+.landing {
     background-image: url('../img/landing.jpg');
     height: calc(100vh - 64px);
     background-size: cover;
     position: relative;
-    
+
 }
-.landing .intro-text{
+
+.landing .intro-text {
     position: absolute;
     left: 50%;
     top: 50%;
     text-align: center;
     width: 320px;
     max-width: 100%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%, -50%);
+
 }
-.landing .intro-text h1{
+
+.landing .intro-text h1 {
     margin: 0;
     font-size: 50px;
-    color:var(--main-color);
+    color: var(--main-color);
     font-weight: bold;
 }
-.landing .intro-text p{
+
+.landing .intro-text p {
     font-size: 19px;
     line-height: 1.8;
 
@@ -179,33 +213,110 @@ body {
 /*--------------------------------------------------------End Landing------------------------------------------------------------*/
 /*--------------------------------------------------------Features--------------------------------------------------------------*/
 
-.features{
+.features {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #f6f6f6;
-    
+
 }
-.features .container{
+
+.features .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
-.features .feat{
+
+.features .feat {
     padding: 20px;
     text-align: center;
 }
-.features .feat i{
-   color: var(--main-color);
+
+.features .feat i {
+    color: var(--main-color);
 }
 
-.features .feat h3{
-font-weight: 800;
-margin: 30px 0;
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
 }
 
-.features .feat p{
-line-height: 1.8;
-color: #777;
-font-size: 17px;
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
 }
 
+/*--------------------------------------------------------End Features--------------------------------------------------------------*/
+/*--------------------------------------------------------Services------------------------------------------------------------------*/
+
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.services .services-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+    .services .services-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .services-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .services-content .srv .text{
+    flex: 1;
+}
+
+.services .services-content .srv .text h3{
+margin: 0 0 20px;
+}
+.services .services-content .srv .text p{
+ color: #444;
+ font-weight: 300;   
+ line-height: 1.6;
+}
+
+.services .services-content .image{
+text-align: center;
+position: relative;
+}
+
+.services .services-content .image::before{
+content: "";
+background-color: var(--secondary-color);
+width: 100px;
+height: calc(100% + 100px);
+top: -50px;
+position: absolute;
+right: 0;
+z-index: -1;
+
+}
+
+.services .services-content .image img{
+    width: 260px;
+}
+
+@media (max-width:1199px){
+    .image-column{
+        display: none;
+    }
+}
+
+
+/*--------------------------------------------------------End Services--------------------------------------------------------------*/
